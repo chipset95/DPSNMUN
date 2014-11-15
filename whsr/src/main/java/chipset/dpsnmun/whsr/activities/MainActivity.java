@@ -1,12 +1,13 @@
 package chipset.dpsnmun.whsr.activities;
 
-import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 
+import com.nispok.snackbar.Snackbar;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
@@ -18,7 +19,9 @@ import java.util.List;
 import chipset.dpsnmun.whsr.R;
 import chipset.dpsnmun.whsr.adapters.MessagesListViewAdapter;
 
+import static chipset.dpsnmun.whsr.resources.Constants.CLASS_HINTS;
 import static chipset.dpsnmun.whsr.resources.Constants.CLASS_MESSAGES;
+import static chipset.dpsnmun.whsr.resources.Constants.KEY_HINT;
 import static chipset.dpsnmun.whsr.resources.Constants.KEY_MESSAGE;
 /*
  * Developer: chipset
@@ -29,30 +32,44 @@ import static chipset.dpsnmun.whsr.resources.Constants.KEY_MESSAGE;
 
 public class MainActivity extends ActionBarActivity {
 
+    ProgressBar messagesLoadingProgressBar;
     ListView messagesListView;
-    String[] messages;
+    String[] messages, hints;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         messagesListView = (ListView) findViewById(R.id.messages_list_view);
+        messagesLoadingProgressBar = (ProgressBar) findViewById(R.id.messages_loading_progress_bar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        ParseQuery<ParseObject> query = ParseQuery.getQuery(CLASS_MESSAGES);
-        query.findInBackground(new FindCallback<ParseObject>() {
+        messagesLoadingProgressBar.setVisibility(View.VISIBLE);
+        ParseQuery<ParseObject> queryHints = ParseQuery.getQuery(CLASS_HINTS);
+        queryHints.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> parseObjects, ParseException e) {
+                if (e == null) {
+                    hints = new String[parseObjects.size()];
+                    for (int i = 0; i < parseObjects.size(); i++) {
+                        hints[i] = parseObjects.get(i).getString(KEY_HINT);
+                    }
+                }
+            }
+        });
+        ParseQuery<ParseObject> queryMessages = ParseQuery.getQuery(CLASS_MESSAGES);
+        queryMessages.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> parseObjects, ParseException e) {
+                messagesLoadingProgressBar.setVisibility(View.GONE);
                 if (e == null) {
                     messages = new String[parseObjects.size()];
                     for (int i = 0; i < parseObjects.size(); i++) {
                         messages[i] = parseObjects.get(i).getString(KEY_MESSAGE);
-
                         messagesListView.setAdapter(new MessagesListViewAdapter(getApplicationContext(), messages));
                         messagesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                             @Override
                             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                                builder.setMessage(messages[i]).setNeutralButton(android.R.string.ok, null).create().show();
+                                Snackbar.with(getApplicationContext()).text(hints[i]).show(MainActivity.this);
                             }
                         });
                     }
