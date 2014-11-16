@@ -59,44 +59,46 @@ public class MainActivity extends ActionBarActivity {
                         hints[i] = parseObjects.get(i).getString(KEY_HINT);
                     }
                 }
-            }
-        });
-        ParseQuery<ParseObject> queryMessages = ParseQuery.getQuery(CLASS_MESSAGES);
-        queryMessages.findInBackground(new FindCallback<ParseObject>() {
-            @Override
-            public void done(List<ParseObject> parseObjects, ParseException e) {
-                messagesLoadingProgressBar.setVisibility(View.GONE);
-                if (e == null) {
-                    messages = new String[parseObjects.size()];
-                    for (int i = 0; i < parseObjects.size(); i++) {
-                        messages[i] = parseObjects.get(i).getString(KEY_MESSAGE);
-                        messagesListView.setAdapter(new MessagesListViewAdapter(getApplicationContext(), messages));
-
-                        messagesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                            @Override
-                            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                                Snackbar.with(getApplicationContext()).text("MESSAGE WILL SELF DESTRUCT IN 5 SECONDS").show(MainActivity.this);
-                                alertDialog = new AlertDialog.Builder(MainActivity.this).create();
-                                alertDialog.setMessage(hints[i]);
-                                alertDialog.show();
-
-                                new Handler().postDelayed(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        alertDialog.dismiss();
-                                        finish();
-                                    }
-                                }, 5000);
+                ParseQuery<ParseObject> queryMessages = ParseQuery.getQuery(CLASS_MESSAGES);
+                queryMessages.findInBackground(new FindCallback<ParseObject>() {
+                    @Override
+                    public void done(List<ParseObject> parseObjects, ParseException e) {
+                        messagesLoadingProgressBar.setVisibility(View.GONE);
+                        if (e == null) {
+                            messages = new String[parseObjects.size()];
+                            for (int i = 0; i < parseObjects.size(); i++) {
+                                messages[i] = parseObjects.get(i).getString(KEY_MESSAGE);
                             }
-                        });
+                            messagesListView.setAdapter(new MessagesListViewAdapter(getApplicationContext(), messages));
+
+                            messagesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                @Override
+                                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                    Snackbar.with(getApplicationContext()).text("MESSAGE WILL SELF DESTRUCT IN 5 SECONDS").show(MainActivity.this);
+                                    alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+                                    alertDialog.setMessage(hints[i]);
+                                    alertDialog.show();
+
+                                    new Handler().postDelayed(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            alertDialog.dismiss();
+                                            finish();
+                                        }
+                                    }, 5000);
+                                }
+                            });
+
+                        } else {
+                            messages = new String[1];
+                            messages[0] = "Nothing Here";
+                            e.printStackTrace();
+                        }
                     }
-                } else {
-                    messages = new String[1];
-                    messages[0] = "Nothing Here";
-                    e.printStackTrace();
-                }
+                });
             }
         });
+
     }
 
     @Override
