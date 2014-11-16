@@ -1,6 +1,8 @@
 package chipset.dpsnmun.whsr.activities;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -35,6 +37,8 @@ public class MainActivity extends ActionBarActivity {
     ProgressBar messagesLoadingProgressBar;
     ListView messagesListView;
     String[] messages, hints;
+    AlertDialog alertDialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +47,7 @@ public class MainActivity extends ActionBarActivity {
         messagesListView = (ListView) findViewById(R.id.messages_list_view);
         messagesLoadingProgressBar = (ProgressBar) findViewById(R.id.messages_loading_progress_bar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(ParseUser.getCurrentUser().getUsername());
         messagesLoadingProgressBar.setVisibility(View.VISIBLE);
         ParseQuery<ParseObject> queryHints = ParseQuery.getQuery(CLASS_HINTS);
         queryHints.findInBackground(new FindCallback<ParseObject>() {
@@ -66,10 +71,22 @@ public class MainActivity extends ActionBarActivity {
                     for (int i = 0; i < parseObjects.size(); i++) {
                         messages[i] = parseObjects.get(i).getString(KEY_MESSAGE);
                         messagesListView.setAdapter(new MessagesListViewAdapter(getApplicationContext(), messages));
+
                         messagesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                             @Override
                             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                                Snackbar.with(getApplicationContext()).text(hints[i]).show(MainActivity.this);
+                                Snackbar.with(getApplicationContext()).text("MESSAGE WILL SELF DESTRUCT IN 5 SECONDS").show(MainActivity.this);
+                                alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+                                alertDialog.setMessage(hints[i]);
+                                alertDialog.show();
+
+                                new Handler().postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        alertDialog.dismiss();
+                                        finish();
+                                    }
+                                }, 5000);
                             }
                         });
                     }

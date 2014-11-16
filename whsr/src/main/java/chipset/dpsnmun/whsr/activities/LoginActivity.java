@@ -15,6 +15,7 @@ import com.parse.ParseException;
 import com.parse.ParseUser;
 
 import chipset.dpsnmun.whsr.R;
+import chipset.dpsnmun.whsr.resources.Functions;
 
 import static chipset.dpsnmun.whsr.resources.Constants.KEY_ADMIN;
 import static chipset.dpsnmun.whsr.resources.Constants.KEY_LOGIN_COUNT;
@@ -36,7 +37,7 @@ public class LoginActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        getSupportActionBar().setTitle(getResources().getString(R.string.title_activity_login));
         loginUsernameEditText = (EditText) findViewById(R.id.login_username_edit_text);
         loginPasswordEditText = (EditText) findViewById(R.id.login_password_edit_text);
         loginButton = (Button) findViewById(R.id.login_button);
@@ -47,6 +48,7 @@ public class LoginActivity extends ActionBarActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Functions.funkit().hideKeyboard(getApplicationContext(), getCurrentFocus());
                 progressDialog.show();
                 if (!loginUsernameEditText.getText().toString().isEmpty() && !loginPasswordEditText.getText().toString().isEmpty()) {
                     ParseUser.logInInBackground(loginUsernameEditText.getText().toString(), loginPasswordEditText.getText().toString(), new LogInCallback() {
