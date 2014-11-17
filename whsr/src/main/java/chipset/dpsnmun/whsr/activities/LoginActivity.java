@@ -8,17 +8,21 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.nispok.snackbar.Snackbar;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 
+import java.util.Date;
+
 import chipset.dpsnmun.whsr.R;
 import chipset.dpsnmun.whsr.resources.Functions;
 
 import static chipset.dpsnmun.whsr.resources.Constants.KEY_ADMIN;
 import static chipset.dpsnmun.whsr.resources.Constants.KEY_LOGIN_COUNT;
+import static chipset.dpsnmun.whsr.resources.Constants.KEY_NO_LOGIN;
 /*
  * Developer: chipset
  * Package : chipset.dpsnmun.whsr.activities
@@ -29,9 +33,11 @@ import static chipset.dpsnmun.whsr.resources.Constants.KEY_LOGIN_COUNT;
 public class LoginActivity extends ActionBarActivity {
 
     EditText loginUsernameEditText, loginPasswordEditText;
-    Button loginButton, adviceButton;
+    Button loginButton;
     ProgressDialog progressDialog;
+    ImageView logoImageView;
     int loginCount;
+    boolean noLogin = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +47,7 @@ public class LoginActivity extends ActionBarActivity {
         loginUsernameEditText = (EditText) findViewById(R.id.login_username_edit_text);
         loginPasswordEditText = (EditText) findViewById(R.id.login_password_edit_text);
         loginButton = (Button) findViewById(R.id.login_button);
-        adviceButton = (Button) findViewById(R.id.advice_button);
+        logoImageView = (ImageView) findViewById(R.id.logo_image_view);
         progressDialog = new ProgressDialog(LoginActivity.this);
         progressDialog.setMessage("Please wait...");
         progressDialog.setCancelable(true);
@@ -57,19 +63,47 @@ public class LoginActivity extends ActionBarActivity {
                             if (e == null) {
                                 if (user.getBoolean(KEY_ADMIN)) {
                                     loginCount = 0;
+                                    noLogin = false;
                                 } else {
                                     loginCount = user.getInt(KEY_LOGIN_COUNT);
+                                    noLogin = user.getBoolean(KEY_NO_LOGIN);
                                 }
                                 if (loginCount >= 0 && loginCount < 5) {
-                                    loginCount++;
-                                    user.put(KEY_LOGIN_COUNT, loginCount);
-                                    user.saveInBackground();
-                                    progressDialog.dismiss();
-                                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                                    finish();
+                                    if (noLogin) {
+                                        Date currentTime, banTime, reqTime;
+                                        banTime = user.getUpdatedAt();
+                                        currentTime = new Date();
+                                        reqTime = Functions.funkit().addDays(banTime, 24);
+                                        if (currentTime.before(reqTime)) {
+                                            progressDialog.dismiss();
+                                            Snackbar.with(getApplicationContext()).text("Can't login yet").show(LoginActivity.this);
+                                            ParseUser.logOut();
+                                            loginUsernameEditText.setText(null);
+                                            loginPasswordEditText.setText(null);
+                                        } else {
+                                            loginCount++;
+                                            user.put(KEY_LOGIN_COUNT, loginCount);
+                                            user.put(KEY_NO_LOGIN, noLogin);
+                                            user.saveInBackground();
+                                            progressDialog.dismiss();
+                                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                            finish();
+                                        }
+                                    } else {
+                                        loginCount++;
+                                        user.put(KEY_LOGIN_COUNT, loginCount);
+                                        user.put(KEY_NO_LOGIN, noLogin);
+                                        user.saveInBackground();
+                                        progressDialog.dismiss();
+                                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                        finish();
+                                    }
                                 } else {
                                     progressDialog.dismiss();
                                     Snackbar.with(getApplicationContext()).text("Cannot exceed 5 logins").show(LoginActivity.this);
+                                    ParseUser.logOut();
+                                    loginUsernameEditText.setText(null);
+                                    loginPasswordEditText.setText(null);
                                 }
                             } else {
                                 progressDialog.dismiss();
@@ -87,7 +121,7 @@ public class LoginActivity extends ActionBarActivity {
 
         });
 
-        adviceButton.setOnClickListener(new View.OnClickListener() {
+        logoImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);

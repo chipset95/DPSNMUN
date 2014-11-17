@@ -10,6 +10,10 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="advice">A WORD OF ADVICE</string>
+    <string name="touch_here">Touch Here</string>
+    <string name="dont_touch_here">Don\'t Touch Here</string>
     <string name="a_word_of_advice">The Username is your surname\n\nThe Password is not your surname and has some capital letters</string>
+    <string name="touch_here_message">Welcome to the Chessboard, 16 Blacks and 16 Whites!\n\nThink and then move forward: thats what you are!</string>
+    <string name="dont_touch_here_message">WE WARNED YOU!\n\nYou can\'t login for next 24 hours!</string>
 
 </resources>
