@@ -3,7 +3,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/dpsnmun</item>
-        <item name="colorPrimaryDark">@color/dpsnmun</item>
+        <item name="colorPrimaryDark">@color/nephritis</item>
         <item name="colorAccent">@color/dpsnmundark</item>
         <!-- Customize your theme here. -->
     </style>

@@ -82,6 +82,7 @@ public class LoginActivity extends ActionBarActivity {
                                             loginPasswordEditText.setText(null);
                                         } else {
                                             loginCount++;
+                                            noLogin = false;
                                             user.put(KEY_LOGIN_COUNT, loginCount);
                                             user.put(KEY_NO_LOGIN, noLogin);
                                             user.saveInBackground();
@@ -91,6 +92,7 @@ public class LoginActivity extends ActionBarActivity {
                                         }
                                     } else {
                                         loginCount++;
+                                        noLogin = false;
                                         user.put(KEY_LOGIN_COUNT, loginCount);
                                         user.put(KEY_NO_LOGIN, noLogin);
                                         user.saveInBackground();
@@ -126,7 +128,7 @@ public class LoginActivity extends ActionBarActivity {
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                 builder.setMessage(getResources().getString(R.string.a_word_of_advice));
-                builder.setNeutralButton(android.R.string.ok, null);
+                builder.setPositiveButton(android.R.string.ok, null);
                 builder.create();
                 builder.show();
             }
