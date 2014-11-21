@@ -8,7 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/whsr" />
+            <option value="$PROJECT_DIR$/dpsnmun" />
           </set>
         </option>
       </GradleProjectSettings>
