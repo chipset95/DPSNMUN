@@ -1,175 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_width="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_home"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
 
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_weight="0.5"
-            android:layout_margin="@dimen/minute_margin"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:id="@+id/committee_one_layout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:background="@drawable/button_click_card"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.6"
-                        android:src="@drawable/ic_launcher" />
-
-                    <TextView
-                        android:textColor="@color/black"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.4"
-                        android:text="TEST" />
-                </LinearLayout>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_margin="@dimen/minute_margin"
-            android:layout_weight="0.5"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:id="@+id/committee_two_layout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:background="@drawable/button_click_card"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.6"
-                        android:src="@drawable/ic_launcher" />
-
-                    <TextView
-                        android:textColor="@color/black"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.4"
-                        android:text="TEST" />
-                </LinearLayout>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:orientation="horizontal">
-
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_margin="@dimen/minute_margin"
-            android:layout_weight="0.5"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:id="@+id/committee_three_layout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:background="@null"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:background="@null"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.8"
-                        android:src="@drawable/ic_launcher" />
-
-                    <TextView
-                        android:background="@null"
-                        android:textColor="@color/black"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.2"
-                        android:gravity="center"
-                        android:text="TEST" />
-                </LinearLayout>
-
-                <Button
-                    android:background="@drawable/button_click_card"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_weight="0.5"
-            android:layout_margin="@dimen/minute_margin"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:id="@+id/committee_four_layout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:background="@drawable/button_click_card"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.6"
-                        android:src="@drawable/ic_launcher" />
-
-                    <TextView
-                        android:textColor="@color/black"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.4"
-                        android:text="TEST" />
-                </LinearLayout>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-    </LinearLayout>
+    <include
+        android:id="@+id/drawer_layout"
+        layout="@layout/rest_of_home" />
 </LinearLayout>

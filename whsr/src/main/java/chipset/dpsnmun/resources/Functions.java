@@ -7,10 +7,10 @@ import android.view.inputmethod.InputMethodManager;
 import java.util.Calendar;
 import java.util.Date;
 
-/**
+/*
  * Developer: chipset
  * Package : chipset.dpsnmun.resources
- * Project : WHSR
+ * Project : DPSNMUN'14
  * Date : 16/11/14
  */
 public class Functions {
