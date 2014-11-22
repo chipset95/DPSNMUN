@@ -2,9 +2,9 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/dpsnmun</item>
+        <item name="colorPrimary">@color/dpsnmundark</item>
         <item name="colorPrimaryDark">@color/nephritis</item>
-        <item name="colorAccent">@color/dpsnmundark</item>
+        <item name="colorAccent">@color/dpsnmun</item>
         <item name="windowActionBar">false</item>
     </style>
 

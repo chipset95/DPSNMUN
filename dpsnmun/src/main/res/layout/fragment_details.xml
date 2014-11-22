@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/dpsnmundark"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_committees"
+        android:textColor="?attr/colorAccent"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="50sp" />
+
+    <ImageView
+        android:paddingLeft="@dimen/big_margin"
+        android:paddingRight="@dimen/big_margin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25"
+        android:layout_gravity="center"
+        android:src="@drawable/rsz_hga"
+        android:contentDescription="@string/committee_one_text"
+        android:layout_marginTop="@dimen/minute_margin"
+        android:layout_marginBottom="@dimen/minute_margin" />
+
+    <ImageView
+        android:paddingLeft="@dimen/big_margin"
+        android:paddingRight="@dimen/big_margin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25"
+        android:layout_gravity="center"
+        android:src="@drawable/rsz_hga"
+        android:contentDescription="@string/committee_one_text"
+        android:layout_marginTop="@dimen/minute_margin"
+        android:layout_marginBottom="@dimen/minute_margin" />
+
+    <ImageView
+        android:paddingLeft="@dimen/big_margin"
+        android:paddingRight="@dimen/big_margin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25"
+        android:layout_gravity="center"
+        android:src="@drawable/rsz_hga"
+        android:contentDescription="@string/committee_one_text"
+        android:layout_marginTop="@dimen/minute_margin"
+        android:layout_marginBottom="@dimen/minute_margin" />
+
+    <ImageView
+        android:paddingLeft="@dimen/big_margin"
+        android:paddingRight="@dimen/big_margin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25"
+        android:layout_gravity="center"
+        android:src="@drawable/rsz_hga"
+        android:contentDescription="@string/committee_one_text"
+        android:layout_marginTop="@dimen/minute_margin"
+        android:layout_marginBottom="@dimen/minute_margin" />
+</LinearLayout>

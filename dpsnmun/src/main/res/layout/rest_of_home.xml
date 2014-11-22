@@ -3,162 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/content_frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/clouds"
-        android:padding="@dimen/activity_horizontal_margin">
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_weight="0.5"
-            android:layout_height="0dp">
-
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/committee_one_card"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:layout_margin="@dimen/minute_margin">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.8"
-                        android:src="@drawable/hsa"
-                        android:contentDescription="@string/committee_one_text"
-                        android:layout_margin="@dimen/minute_margin" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.2"
-                        android:gravity="center"
-                        android:textAllCaps="true"
-                        android:textStyle="bold"
-                        android:fontFamily="sans-serif-light"
-                        android:layout_margin="@dimen/minute_margin"
-                        android:text="@string/committee_one_text" />
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/committee_two_card"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:layout_margin="@dimen/minute_margin">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.8"
-                        android:src="@drawable/imf"
-                        android:contentDescription="@string/committee_two_text"
-                        android:layout_margin="@dimen/minute_margin" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.2"
-                        android:gravity="center"
-                        android:textAllCaps="true"
-                        android:textStyle="bold"
-                        android:fontFamily="sans-serif-light"
-                        android:layout_margin="@dimen/minute_margin"
-                        android:text="@string/committee_two_text" />
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_weight="0.5"
-            android:layout_height="0dp">
-
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/committee_three_card"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:layout_margin="@dimen/minute_margin">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.8"
-                        android:src="@drawable/icc"
-                        android:contentDescription="@string/committee_three_text"
-                        android:layout_margin="@dimen/minute_margin" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.2"
-                        android:gravity="center"
-                        android:textAllCaps="true"
-                        android:textStyle="bold"
-                        android:fontFamily="sans-serif-light"
-                        android:layout_margin="@dimen/minute_margin"
-                        android:text="@string/committee_three_text" />
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/committee_four_card"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:layout_margin="@dimen/minute_margin">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.8"
-                        android:src="@drawable/whsr"
-                        android:layout_margin="@dimen/minute_margin" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.2"
-                        android:gravity="center"
-                        android:textAllCaps="true"
-                        android:textStyle="bold"
-                        android:fontFamily="sans-serif-light"
-                        android:layout_margin="@dimen/minute_margin"
-                        android:text="@string/committee_four_text" />
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-        </LinearLayout>
-    </LinearLayout>
+        android:layout_height="match_parent" />
 
     <ListView
         android:id="@+id/drawer_list"
@@ -166,7 +14,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:choiceMode="singleChoice"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="8dp"
-        android:background="@color/silver" />
+        android:divider="@color/dpsnmun"
+        android:dividerHeight="1dp"
+        android:background="@color/dpsnmundark" />
 </android.support.v4.widget.DrawerLayout>
