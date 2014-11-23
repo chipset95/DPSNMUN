@@ -16,5 +16,5 @@
 
     <include
         android:id="@+id/drawer_layout"
-        layout="@layout/rest_of_home" />
+        layout="@layout/rest_of_main" />
 </LinearLayout>
