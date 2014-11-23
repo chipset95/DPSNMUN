@@ -40,12 +40,16 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:paddingLeft="@dimen/big_margin"
+            android:paddingRight="@dimen/big_margin"
             android:layout_width="0dp"
             android:layout_weight="0.5"
             android:layout_height="match_parent"
             android:src="@drawable/rsz_logo" />
 
         <ImageView
+            android:paddingLeft="@dimen/big_margin"
+            android:paddingRight="@dimen/big_margin"
             android:layout_width="0dp"
             android:layout_weight="0.5"
             android:layout_height="match_parent"

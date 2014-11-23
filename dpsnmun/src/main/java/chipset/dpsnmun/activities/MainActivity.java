@@ -21,6 +21,7 @@ import chipset.dpsnmun.R;
 import chipset.dpsnmun.fragements.ContactFragment;
 import chipset.dpsnmun.fragements.DetailFragment;
 import chipset.dpsnmun.fragements.HomeFragment;
+import chipset.dpsnmun.fragements.SlideUpFragment;
 import chipset.dpsnmun.resources.Functions;
 
 import static chipset.dpsnmun.resources.Constants.URL_DPSNMUN;
@@ -65,6 +66,11 @@ public class MainActivity extends ActionBarActivity {
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
                 .replace(R.id.content_frame, fragment).commit();
+        Fragment frag = new SlideUpFragment();
+        FragmentManager fragManager = getFragmentManager();
+        fragManager.beginTransaction()
+                .replace(R.id.slide_up_frame, frag).commit();
+
 
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

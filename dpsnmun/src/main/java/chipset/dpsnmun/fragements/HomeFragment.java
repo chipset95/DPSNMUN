@@ -31,7 +31,7 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         TextView homeTextView = (TextView) view.findViewById(R.id.homeTextView);
-        String actualStringToDisplay = "<font COLOR=\"#FFFFFF\">DPSN</font><font COLOR=\"#1fd571\"> MUN<font COLOR=\"#FFFFFF\">\'14";
+        String actualStringToDisplay = "<font COLOR=\"#FFFFFF\">DPSN</font><font COLOR=\"#1fd571\"> MUN</font><font COLOR=\"#FFFFFF\">\'14</font>";
         homeTextView.setText(Html.fromHtml(actualStringToDisplay));
 
     }
