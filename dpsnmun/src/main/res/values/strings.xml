@@ -2,6 +2,8 @@
 <resources>
 
     <string name="app_name">DPSNMUN\'14</string>
+    <string name="winter_is_coming">Winter Is Coming…</string>
+    <string name="winter_is_here">Winter, Is Here!</string>
     <string name="committee_one_text">Historic General Assembly</string>
     <string name="committee_two_text">International Monetary Fund</string>
     <string name="committee_three_text">International Criminal Court</string>
@@ -9,7 +11,18 @@
     <string name="title_home">Home</string>
     <string name="title_committees">Committees</string>
     <string name="title_contact">Contact Us</string>
-
+    <string name="commit">Commitment Redefined</string>
+    <string name="date">2–3 December, 2014</string>
+    <string name="collab">In collaboration with the United Nations Information Centre for India and Bhutan</string>
+    <string name="hga_data">Drafting a comprehensive framework to combat terrorist financing through conflict diamonds</string>
+    <string name="imf_data">Economic reforms and structural adjustments in India</string>
+    <string name="icc_data">Genesis, Scope and Mandate of the International Criminal Court</string>
+    <string name="whsr_data">We are not gonna make this too easy for you (*message*)</string>
+    <string name="md">MORE DETAILS</string>
+    <string name="c1">Delhi Public School Noida</string>
+    <string name="c2">Sector 30, Noida</string>
+    <string name="c3">Uttar Pradesh 201303</string>
+    <string name="c4">Phone # 0120 450 9100</string>
     <string-array name="drawer_items_title">
         <item>Home</item>
         <item>Details</item>

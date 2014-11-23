@@ -3,18 +3,33 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent">
 
-    <FrameLayout
-        android:id="@+id/content_frame"
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sliding_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <ListView
-        android:id="@+id/drawer_list"
-        android:layout_width="320dp"
         android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/dpsnmun"
+        sothree:panelHeight="50dp"
+        sothree:shadowHeight="5dp">
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/slide_up"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/slide_up" />
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+    <include
+        android:id="@+id/nav_drawer"
+        android:layout_width="320dp"
         android:layout_gravity="start"
-        android:choiceMode="singleChoice"
-        android:divider="@color/dpsnmun"
-        android:dividerHeight="1dp"
-        android:background="@color/dpsnmundark" />
+        android:layout_height="match_parent"
+        layout="@layout/nav_drawer" />
 </android.support.v4.widget.DrawerLayout>

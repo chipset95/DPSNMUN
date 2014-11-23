@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:background="@color/dpsnmundark"
@@ -15,6 +16,7 @@
         android:textSize="50sp" />
 
     <ImageView
+        android:id="@+id/coiv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.25"
@@ -25,6 +27,7 @@
         android:layout_marginBottom="@dimen/minute_margin" />
 
     <ImageView
+        android:id="@+id/ctwiv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.25"
@@ -35,6 +38,7 @@
         android:layout_marginBottom="@dimen/minute_margin" />
 
     <ImageView
+        android:id="@+id/cthiv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.25"
@@ -45,6 +49,7 @@
         android:layout_marginBottom="@dimen/minute_margin" />
 
     <ImageView
+        android:id="@+id/cfiv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.25"

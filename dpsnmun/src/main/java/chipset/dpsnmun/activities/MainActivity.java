@@ -14,13 +14,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import chipset.dpsnmun.R;
 import chipset.dpsnmun.fragements.ContactFragment;
 import chipset.dpsnmun.fragements.DetailFragment;
 import chipset.dpsnmun.fragements.HomeFragment;
+import chipset.dpsnmun.resources.Functions;
 
+import static chipset.dpsnmun.resources.Constants.URL_DPSNMUN;
 /*
  * Developer: chipset
  * Package : chipset.dpsnmun.activities
@@ -35,6 +38,7 @@ public class MainActivity extends ActionBarActivity {
     Toolbar mToolbar;
     ListView mDrawerListView;
     String[] mDrawerTitles;
+    ImageView logoImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,7 @@ public class MainActivity extends ActionBarActivity {
         mToolbar = (Toolbar) findViewById(R.id.toolbar_home);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerListView = (ListView) findViewById(R.id.drawer_list);
+        logoImageView = (ImageView) findViewById(R.id.logoiv);
 
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -87,9 +92,17 @@ public class MainActivity extends ActionBarActivity {
                         break;
                     }
                 }
-                mDrawerLayout.closeDrawer(mDrawerListView);
+                mDrawerLayout.closeDrawers();
             }
         });
+
+        logoImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Functions.funkit().browserIntent(getApplicationContext(), URL_DPSNMUN);
+            }
+        });
+
     }
 
     @Override
