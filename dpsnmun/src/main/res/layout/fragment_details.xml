@@ -15,58 +15,69 @@
         android:fontFamily="sans-serif-thin"
         android:textSize="50sp" />
 
-    <ImageView
-        android:layout_marginTop="@dimen/big_margin"
-        android:id="@+id/coiv"
+    <ScrollView
+        android:scrollbarThumbVertical="@drawable/scroll_color"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.2"
-        android:layout_gravity="center"
-        android:src="@drawable/rsz_hga"
-        android:contentDescription="@string/committee_one_text"
-        android:layout_marginBottom="@dimen/minute_margin" />
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/ctwiv"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.2"
-        android:layout_gravity="center"
-        android:src="@drawable/rsz_imf"
-        android:contentDescription="@string/committee_one_text"
-        android:layout_marginTop="@dimen/minute_margin"
-        android:layout_marginBottom="@dimen/minute_margin" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/cthiv"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.2"
-        android:layout_gravity="center"
-        android:src="@drawable/rsz_icc"
-        android:contentDescription="@string/committee_one_text"
-        android:layout_marginTop="@dimen/minute_margin"
-        android:layout_marginBottom="@dimen/minute_margin" />
+            <ImageView
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/big_margin"
+                android:id="@+id/coiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/rsz_hga"
+                android:contentDescription="@string/committee_one_text"
+                android:layout_marginBottom="@dimen/minute_margin" />
 
-    <ImageView
-        android:id="@+id/cfiv"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.2"
-        android:layout_gravity="center"
-        android:src="@drawable/rsz_whsr"
-        android:contentDescription="@string/committee_one_text"
-        android:layout_marginTop="@dimen/minute_margin"
-        android:layout_marginBottom="@dimen/minute_margin" />
+            <ImageView
+                android:layout_below="@id/coiv"
+                android:id="@+id/ctwiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/rsz_imf"
+                android:contentDescription="@string/committee_one_text"
+                android:layout_marginTop="@dimen/minute_margin"
+                android:layout_marginBottom="@dimen/minute_margin" />
 
-    <ImageView
-        android:id="@+id/riv"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.2"
-        android:layout_gravity="center"
-        android:src="@drawable/rsz_reg"
-        android:contentDescription="@string/committee_one_text"
-        android:layout_marginTop="@dimen/minute_margin"
-        android:layout_marginBottom="@dimen/minute_margin" />
+            <ImageView
+                android:layout_below="@id/ctwiv"
+                android:id="@+id/cthiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/rsz_icc"
+                android:contentDescription="@string/committee_one_text"
+                android:layout_marginTop="@dimen/minute_margin"
+                android:layout_marginBottom="@dimen/minute_margin" />
+
+            <ImageView
+                android:layout_below="@id/cthiv"
+                android:id="@+id/cfiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/rsz_whsr"
+                android:contentDescription="@string/committee_one_text"
+                android:layout_marginTop="@dimen/minute_margin"
+                android:layout_marginBottom="@dimen/minute_margin" />
+
+            <ImageView
+                android:layout_below="@id/cfiv"
+                android:id="@+id/riv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/rsz_reg"
+                android:contentDescription="@string/committee_one_text"
+                android:layout_marginTop="@dimen/minute_margin"
+                android:layout_marginBottom="@dimen/minute_margin" />
+        </RelativeLayout>
+    </ScrollView>
 </LinearLayout>

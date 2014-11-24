@@ -17,6 +17,7 @@
         android:textSize="50sp" />
 
     <ScrollView
+        android:scrollbarThumbVertical="@drawable/scroll_color"
         android:layout_marginTop="@dimen/big_margin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -37,12 +38,12 @@
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:layout_gravity="center"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
                         android:fontFamily="sans-serif-condensed"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:textStyle="bold"
                         android:layout_weight="0.5"
@@ -53,7 +54,7 @@
 
                     <TextView
                         android:fontFamily="sans-serif-condensed"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:textStyle="bold"
                         android:layout_weight="0.5"
@@ -70,12 +71,12 @@
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:gravity="center"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
                         android:fontFamily="sans-serif-condensed"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:textStyle="bold"
                         android:layout_weight="0.5"
@@ -86,7 +87,7 @@
 
                     <TextView
                         android:fontFamily="sans-serif-condensed"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:textStyle="bold"
                         android:layout_weight="0.5"
@@ -114,7 +115,7 @@
 
                     <TextView
                         android:fontFamily="sans-serif-condensed"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:layout_weight="0.5"
                         android:layout_width="match_parent"
@@ -124,7 +125,7 @@
 
                     <TextView
                         android:fontFamily="sans-serif-condensed"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:layout_weight="0.5"
                         android:layout_width="match_parent"
@@ -140,12 +141,12 @@
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:gravity="center"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
                         android:fontFamily="sans-serif-condensed"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:layout_weight="0.5"
                         android:layout_width="match_parent"
@@ -154,7 +155,7 @@
                         android:text="8:00 AM-12:30  PM" />
 
                     <TextView
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:fontFamily="sans-serif-condensed"
                         android:gravity="center"
                         android:layout_weight="0.5"
@@ -177,12 +178,12 @@
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:layout_gravity="center"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
                         android:fontFamily="sans-serif-condensed"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:layout_weight="0.5"
                         android:layout_width="match_parent"
@@ -192,7 +193,7 @@
 
                     <TextView
                         android:fontFamily="sans-serif-condensed"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:layout_weight="0.5"
                         android:layout_width="match_parent"
@@ -208,12 +209,12 @@
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:gravity="center"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
                         android:fontFamily="sans-serif-condensed"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:layout_weight="0.5"
                         android:layout_width="match_parent"
@@ -222,7 +223,7 @@
                         android:text="12:30 PM-2:00 PM" />
 
                     <TextView
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:fontFamily="sans-serif-condensed"
                         android:gravity="center"
                         android:layout_weight="0.5"
@@ -245,12 +246,12 @@
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:layout_gravity="center"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
                         android:fontFamily="sans-serif-condensed"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:layout_weight="0.5"
                         android:layout_width="match_parent"
@@ -260,7 +261,7 @@
 
                     <TextView
                         android:fontFamily="sans-serif-condensed"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:layout_weight="0.5"
                         android:layout_width="match_parent"
@@ -281,7 +282,7 @@
 
                     <TextView
                         android:fontFamily="sans-serif-condensed"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:layout_weight="0.5"
                         android:layout_width="match_parent"
@@ -290,7 +291,7 @@
                         android:text="2:00 PM-5:00 PM" />
 
                     <TextView
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:fontFamily="sans-serif-condensed"
                         android:gravity="center"
                         android:layout_weight="0.5"
@@ -313,12 +314,12 @@
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:layout_gravity="center"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
                         android:fontFamily="sans-serif-condensed"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:layout_weight="0.5"
                         android:layout_width="match_parent"
@@ -328,7 +329,7 @@
 
                     <TextView
                         android:fontFamily="sans-serif-condensed"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:layout_weight="0.5"
                         android:layout_width="match_parent"
@@ -344,12 +345,12 @@
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:gravity="center"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
                         android:fontFamily="sans-serif-condensed"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:layout_weight="0.5"
                         android:layout_width="match_parent"
@@ -358,7 +359,7 @@
                         android:text="5:00 PM-6:00 PM" />
 
                     <TextView
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:fontFamily="sans-serif-condensed"
                         android:gravity="center"
                         android:layout_weight="0.5"
@@ -381,12 +382,12 @@
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:layout_gravity="center"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
                         android:fontFamily="sans-serif-condensed"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:layout_weight="0.5"
                         android:layout_width="match_parent"
@@ -396,7 +397,7 @@
 
                     <TextView
                         android:fontFamily="sans-serif-condensed"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:layout_weight="0.5"
                         android:layout_width="match_parent"
@@ -417,7 +418,7 @@
 
                     <TextView
                         android:fontFamily="sans-serif-condensed"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
