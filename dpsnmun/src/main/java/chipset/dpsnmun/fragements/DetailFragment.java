@@ -14,6 +14,7 @@ import chipset.dpsnmun.resources.Functions;
 
 import static chipset.dpsnmun.resources.Constants.URL_HGA;
 import static chipset.dpsnmun.resources.Constants.URL_ICC;
+import static chipset.dpsnmun.resources.Constants.URL_IMF;
 
 /*
  * Developer: chipset
@@ -67,7 +68,7 @@ public class DetailFragment extends Fragment {
                 alertDialog.setNegativeButton(R.string.md, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Functions.funkit().browserIntent(view.getContext(), URL_HGA);
+                        Functions.funkit().browserIntent(view.getContext(), URL_IMF);
                     }
                 });
                 alertDialog.create();

@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">DPSNMUN\'14</string>
-    <string name="winter_is_coming">Winter Is Coming…</string>
+    <string name="winter_is_coming">Winter is Coming…</string>
     <string name="winter_is_here">Winter, Is Here!</string>
     <string name="committee_one_text">Historic General Assembly</string>
     <string name="committee_two_text">International Monetary Fund</string>
@@ -21,8 +21,8 @@
     <string name="md">BACKGROUND GUIDE</string>
     <string name="c1">Delhi Public School Noida</string>
     <string name="c2">Sector 30, Noida</string>
-    <string name="c3">Uttar Pradesh 201303</string>
-    <string name="c4">Phone # 0120 450 9100</string>
+    <string name="c3">Uttar Pradesh, PIN: 201303</string>
+    <string name="c4">Phone: +91 120 450 9100</string>
     <string-array name="drawer_items_title">
         <item>Home</item>
         <item>Details</item>

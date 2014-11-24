@@ -9,8 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="bottom"
-        android:minHeight="?attr/actionBarSize"
-        android:background="@color/dpsnmun"
         sothree:panelHeight="50dp"
         sothree:shadowHeight="5dp">
 

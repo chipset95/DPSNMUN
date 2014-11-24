@@ -17,6 +17,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import com.sothree.slidinguppanel.SlidingUpPanelLayout;
+
 import chipset.dpsnmun.R;
 import chipset.dpsnmun.fragements.ContactFragment;
 import chipset.dpsnmun.fragements.DetailFragment;
@@ -33,12 +35,13 @@ import static chipset.dpsnmun.resources.Constants.URL_DPSNMUN;
  */
 
 public class MainActivity extends ActionBarActivity {
-
+    SlidingUpPanelLayout mSlidingUpPanelLayout;
     DrawerLayout mDrawerLayout;
     ActionBarDrawerToggle mDrawerToggle;
     Toolbar mToolbar;
     ListView mDrawerListView;
     String[] mDrawerTitles;
+    String mTitle = "DPSNMUN\'14";
     ImageView logoImageView;
 
     @Override
@@ -46,6 +49,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mSlidingUpPanelLayout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
         mToolbar = (Toolbar) findViewById(R.id.toolbar_home);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerListView = (ListView) findViewById(R.id.drawer_list);
@@ -54,7 +58,17 @@ public class MainActivity extends ActionBarActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        mDrawerToggle = new ActionBarDrawerToggle(MainActivity.this, mDrawerLayout, mToolbar, R.string.app_name, R.string.app_name);
+        mDrawerToggle = new ActionBarDrawerToggle(MainActivity.this, mDrawerLayout, mToolbar, R.string.app_name, R.string.app_name) {
+            public void onDrawerOpened(View drawerView) {
+                getSupportActionBar().setTitle(R.string.app_name);
+            }
+
+            public void onDrawerClosed(View drawerView) {
+                getSupportActionBar().setTitle(mTitle);
+                if (mSlidingUpPanelLayout.isPanelExpanded())
+                    mSlidingUpPanelLayout.collapsePanel();
+            }
+        };
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
 
@@ -98,7 +112,10 @@ public class MainActivity extends ActionBarActivity {
                         break;
                     }
                 }
+                mTitle = mDrawerTitles[i];
                 mDrawerLayout.closeDrawers();
+                if (mSlidingUpPanelLayout.isPanelExpanded())
+                    mSlidingUpPanelLayout.collapsePanel();
             }
         });
 
