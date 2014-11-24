@@ -12,7 +12,7 @@ import chipset.dpsnmun.R;
  * Developer: chipset
  * Package : chipset.dpsnmun.fragments
  * Project : DPSNMUN'14
- * Date : 22/11/14
+ * Date : 24/11/14
  */
 public class ScheduleFragment extends Fragment {
 

@@ -3,7 +3,6 @@ package chipset.dpsnmun.fragements;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.text.Html;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,9 +53,7 @@ public class SlideUpFragment extends Fragment {
                             public void run() {
                                 Calendar current = Calendar.getInstance();
                                 Calendar event = Calendar.getInstance();
-                                Log.i("C", current.getTime().toString());
                                 event.set(2014, Calendar.DECEMBER, 2, 8, 0, 0);
-                                Log.i("E", event.getTime().toString());
                                 if (current.before(event)) {
                                     long cur = current.getTimeInMillis();
                                     long eve = event.getTimeInMillis();
