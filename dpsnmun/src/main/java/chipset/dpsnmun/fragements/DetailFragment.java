@@ -15,6 +15,7 @@ import chipset.dpsnmun.resources.Functions;
 import static chipset.dpsnmun.resources.Constants.URL_HGA;
 import static chipset.dpsnmun.resources.Constants.URL_ICC;
 import static chipset.dpsnmun.resources.Constants.URL_IMF;
+import static chipset.dpsnmun.resources.Constants.URL_REG;
 
 /*
  * Developer: chipset
@@ -36,11 +37,12 @@ public class DetailFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        ImageView committeeOneImageView, committeeTwoImageView, committeeThreeImageView, committeeFourImageView;
+        ImageView committeeOneImageView, committeeTwoImageView, committeeThreeImageView, committeeFourImageView, regImageView;
         committeeOneImageView = (ImageView) view.findViewById(R.id.coiv);
         committeeTwoImageView = (ImageView) view.findViewById(R.id.ctwiv);
         committeeThreeImageView = (ImageView) view.findViewById(R.id.cthiv);
         committeeFourImageView = (ImageView) view.findViewById(R.id.cfiv);
+        regImageView = (ImageView) view.findViewById(R.id.riv);
 
         committeeOneImageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,6 +103,13 @@ public class DetailFragment extends Fragment {
                 alertDialog.setPositiveButton(android.R.string.ok, null);
                 alertDialog.create();
                 alertDialog.show();
+            }
+        });
+
+        regImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View view) {
+                Functions.funkit().browserIntent(view.getContext(), URL_REG);
             }
         });
 

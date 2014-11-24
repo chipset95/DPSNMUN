@@ -85,7 +85,7 @@
 
 
         <Button
-            android:id="@+id/callButton"
+            android:id="@+id/call1Button"
             android:layout_marginTop="@dimen/minute_margin"
             android:gravity="center"
             android:background="@android:color/transparent"
@@ -93,8 +93,21 @@
             android:layout_height="wrap_content"
             android:textColor="@color/clouds"
             android:fontFamily="sans-serif-light"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:text="@string/c4" />
+
+
+        <Button
+            android:id="@+id/call2Button"
+            android:layout_marginTop="@dimen/minute_margin"
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/clouds"
+            android:fontFamily="sans-serif-light"
+            android:textSize="25sp"
+            android:text="@string/c5" />
 
     </LinearLayout>
 </ScrollView>

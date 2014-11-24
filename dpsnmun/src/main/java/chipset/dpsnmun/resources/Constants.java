@@ -12,9 +12,11 @@ public class Constants {
     public static String URL_HGA = "http://dpsnmun.com/HistoricGeneralAssembly.pdf" ;
     public static String URL_ICC = "http://dpsnmun.com/ICCReviewConference.pdf" ;
     public static String URL_IMF = "http://dpsnmun.com/InternationalMonetaryFund.pdf";
+    public static String URL_REG = "http://dpsnmun.com/RegistrationProcedureAndPayment.pdf";
     public static String URL_FB = "https://www.facebook.com/dpsnmun";
     public static String URL_TW = "https://twitter.com/dpsnmun";
     public static String URL_MAIL = "dpsnoidamun@gmail.com";
 
-    public static String PHONE = "+911204509100";
+    public static String PHONE_SCHOOL = "+911204509100";
+    public static String PHONE_SANKALP = "+918586065928";
 }

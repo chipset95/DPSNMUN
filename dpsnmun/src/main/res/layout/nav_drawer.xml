@@ -9,7 +9,7 @@
         android:id="@+id/logoiv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.3"
+        android:layout_weight="0.35"
         android:layout_gravity="center"
         android:src="@drawable/bg"
         android:contentDescription="@string/app_name" />
@@ -18,13 +18,15 @@
         android:id="@+id/drawer_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.34"
+        android:layout_weight="0.4"
         android:choiceMode="singleChoice"
         android:divider="@color/dpsnmun"
         android:dividerHeight="1dp"
+        android:scrollbarThumbVertical="@drawable/scroll_color"
         android:background="@color/dpsnmundark" />
 
     <LinearLayout
+        android:layout_marginTop="@dimen/minute_margin"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.33">

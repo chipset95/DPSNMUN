@@ -39,6 +39,7 @@ public class SlideUpFragment extends Fragment {
         final TextView winTextView, winhTextView;
         winTextView = (TextView) view.findViewById(R.id.winTextView);
         winhTextView = (TextView) view.findViewById(R.id.countTextView);
+        winTextView.setText(Html.fromHtml(wic));
 
         new Thread(new Runnable() {
             @Override
@@ -57,7 +58,6 @@ public class SlideUpFragment extends Fragment {
                                 event.set(2014, Calendar.DECEMBER, 2, 8, 0, 0);
                                 Log.i("E", event.getTime().toString());
                                 if (current.before(event)) {
-                                    winTextView.setText(Html.fromHtml(wic));
                                     long cur = current.getTimeInMillis();
                                     long eve = event.getTimeInMillis();
                                     long milliseconds = eve - cur;

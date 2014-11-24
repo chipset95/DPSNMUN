@@ -23,6 +23,7 @@ import chipset.dpsnmun.R;
 import chipset.dpsnmun.fragements.ContactFragment;
 import chipset.dpsnmun.fragements.DetailFragment;
 import chipset.dpsnmun.fragements.HomeFragment;
+import chipset.dpsnmun.fragements.ScheduleFragment;
 import chipset.dpsnmun.fragements.SlideUpFragment;
 import chipset.dpsnmun.resources.Functions;
 
@@ -76,10 +77,10 @@ public class MainActivity extends ActionBarActivity {
         mDrawerListView.setAdapter(new ArrayAdapter<String>(MainActivity.this,
                 R.layout.drawer_list_item, mDrawerTitles));
 
-        Fragment fragment = new HomeFragment();
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.content_frame, fragment).commit();
+        Fragment fra = new HomeFragment();
+        FragmentManager fraManager = getFragmentManager();
+        fraManager.beginTransaction()
+                .replace(R.id.content_frame, fra).commit();
         Fragment frag = new SlideUpFragment();
         FragmentManager fragManager = getFragmentManager();
         fragManager.beginTransaction()
@@ -89,29 +90,28 @@ public class MainActivity extends ActionBarActivity {
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Fragment fragment = new HomeFragment();
                 switch (i) {
                     case 0: {
-                        Fragment fragment = new HomeFragment();
-                        FragmentManager fragmentManager = getFragmentManager();
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame, fragment).commit();
+                        fragment = new HomeFragment();
                         break;
                     }
                     case 1: {
-                        Fragment fragment = new DetailFragment();
-                        FragmentManager fragmentManager = getFragmentManager();
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame, fragment).commit();
+                        fragment = new DetailFragment();
                         break;
                     }
                     case 2: {
-                        Fragment fragment = new ContactFragment();
-                        FragmentManager fragmentManager = getFragmentManager();
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame, fragment).commit();
+                        fragment = new ScheduleFragment();
+                        break;
+                    }
+                    case 3: {
+                        fragment = new ContactFragment();
                         break;
                     }
                 }
+                FragmentManager fragmentManager = getFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.content_frame, fragment).commit();
                 mTitle = mDrawerTitles[i];
                 mDrawerLayout.closeDrawers();
                 if (mSlidingUpPanelLayout.isPanelExpanded())

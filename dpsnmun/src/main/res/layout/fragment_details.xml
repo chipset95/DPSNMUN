@@ -10,27 +10,27 @@
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/title_committees"
+        android:text="@string/title_details"
         android:textColor="?attr/colorAccent"
         android:fontFamily="sans-serif-thin"
         android:textSize="50sp" />
 
     <ImageView
+        android:layout_marginTop="@dimen/big_margin"
         android:id="@+id/coiv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25"
+        android:layout_weight="0.2"
         android:layout_gravity="center"
         android:src="@drawable/rsz_hga"
         android:contentDescription="@string/committee_one_text"
-        android:layout_marginTop="@dimen/minute_margin"
         android:layout_marginBottom="@dimen/minute_margin" />
 
     <ImageView
         android:id="@+id/ctwiv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25"
+        android:layout_weight="0.2"
         android:layout_gravity="center"
         android:src="@drawable/rsz_imf"
         android:contentDescription="@string/committee_one_text"
@@ -41,7 +41,7 @@
         android:id="@+id/cthiv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25"
+        android:layout_weight="0.2"
         android:layout_gravity="center"
         android:src="@drawable/rsz_icc"
         android:contentDescription="@string/committee_one_text"
@@ -52,9 +52,20 @@
         android:id="@+id/cfiv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25"
+        android:layout_weight="0.2"
         android:layout_gravity="center"
         android:src="@drawable/rsz_whsr"
+        android:contentDescription="@string/committee_one_text"
+        android:layout_marginTop="@dimen/minute_margin"
+        android:layout_marginBottom="@dimen/minute_margin" />
+
+    <ImageView
+        android:id="@+id/riv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:layout_gravity="center"
+        android:src="@drawable/rsz_reg"
         android:contentDescription="@string/committee_one_text"
         android:layout_marginTop="@dimen/minute_margin"
         android:layout_marginBottom="@dimen/minute_margin" />
