@@ -36,30 +36,28 @@
             android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:layout_margin="@dimen/minute_margin">
+            android:layout_weight="0.5">
 
             <ImageView
+                android:layout_margin="@dimen/medium_margin"
                 android:layout_width="match_parent"
                 android:layout_weight="0.4"
                 android:layout_height="0dp"
                 android:src="@drawable/kartik" />
 
             <TextView
-                android:paddingTop="@dimen/minute_margin"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.3"
-                android:text="Developed by:"
+                android:layout_weight="0.2"
+                android:text="Developed by"
                 android:textSize="15sp"
                 android:textColor="?attr/colorAccent"
                 android:gravity="center" />
 
             <TextView
-                android:paddingBottom="@dimen/minute_margin"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.3"
+                android:layout_weight="0.2"
                 android:text="Kartik Arora"
                 android:textSize="20sp"
                 android:textColor="?attr/colorAccent"
@@ -74,26 +72,25 @@
             android:layout_weight="0.5">
 
             <ImageView
+                android:layout_margin="@dimen/medium_margin"
                 android:layout_width="match_parent"
                 android:layout_weight="0.4"
                 android:layout_height="0dp"
                 android:src="@drawable/aryan" />
 
             <TextView
-                android:paddingTop="@dimen/minute_margin"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.3"
-                android:text="Idea by:"
+                android:layout_weight="0.2"
+                android:text="Idea by"
                 android:textSize="15sp"
                 android:textColor="?attr/colorAccent"
                 android:gravity="center" />
 
             <TextView
-                android:paddingBottom="@dimen/minute_margin"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.3"
+                android:layout_weight="0.2"
                 android:text="Aditya Aryan"
                 android:textSize="20sp"
                 android:textColor="?attr/colorAccent"
