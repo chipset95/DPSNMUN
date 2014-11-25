@@ -26,7 +26,6 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:layout_marginTop="@dimen/big_margin"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -65,15 +64,13 @@
                     android:layout_height="match_parent"
                     android:src="@drawable/rsz_unic" />
             </LinearLayout>
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/collab"
+                android:textColor="@color/clouds"
+                android:textSize="20sp" />
         </LinearLayout>
     </ScrollView>
-
-    <TextView
-        android:layout_marginTop="0dp"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/collab"
-        android:textColor="@color/clouds"
-        android:textSize="20sp" />
 </LinearLayout>

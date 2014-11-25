@@ -16,6 +16,8 @@
         android:textSize="50sp" />
 
     <ScrollView
+        android:layout_marginTop="@dimen/big_margin"
+
         android:scrollbarThumbVertical="@drawable/scroll_color"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -26,7 +28,6 @@
 
             <ImageView
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="@dimen/big_margin"
                 android:id="@+id/coiv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -43,7 +44,6 @@
                 android:layout_gravity="center"
                 android:src="@drawable/rsz_imf"
                 android:contentDescription="@string/committee_one_text"
-                android:layout_marginTop="@dimen/minute_margin"
                 android:layout_marginBottom="@dimen/minute_margin" />
 
             <ImageView
@@ -54,7 +54,6 @@
                 android:layout_gravity="center"
                 android:src="@drawable/rsz_icc"
                 android:contentDescription="@string/committee_one_text"
-                android:layout_marginTop="@dimen/minute_margin"
                 android:layout_marginBottom="@dimen/minute_margin" />
 
             <ImageView
@@ -65,7 +64,6 @@
                 android:layout_gravity="center"
                 android:src="@drawable/rsz_whsr"
                 android:contentDescription="@string/committee_one_text"
-                android:layout_marginTop="@dimen/minute_margin"
                 android:layout_marginBottom="@dimen/minute_margin" />
 
             <ImageView
@@ -76,7 +74,6 @@
                 android:layout_gravity="center"
                 android:src="@drawable/rsz_reg"
                 android:contentDescription="@string/committee_one_text"
-                android:layout_marginTop="@dimen/minute_margin"
                 android:layout_marginBottom="@dimen/minute_margin" />
         </RelativeLayout>
     </ScrollView>
