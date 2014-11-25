@@ -25,6 +25,7 @@
     <string name="c3">Uttar Pradesh, PIN: 201303</string>
     <string name="c4">Phone: +91 120 450 9100</string>
     <string name="c5">Sankalp Sharma: +91 858 606 5928</string>
+    <string name="why_you_hate_nyan_cat">WHY YOU HATE NYAN CAT?</string>
     <string-array name="drawer_items_title">
         <item>Home</item>
         <item>Details</item>
