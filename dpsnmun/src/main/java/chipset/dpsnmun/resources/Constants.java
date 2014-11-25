@@ -19,4 +19,8 @@ public class Constants {
 
     public static String PHONE_SCHOOL = "+911204509100";
     public static String PHONE_SANKALP = "+918586065928";
+    public static String PHONE_KARAN = "+919650275934";
+    public static String PHONE_ABHINAV = "+919560900362";
+    public static String PHONE_HIMANGI = "+919971973101";
+    public static String PHONE_TAJINDER = "+919811108010";
 }

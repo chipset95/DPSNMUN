@@ -18,8 +18,8 @@
     <ScrollView
         android:layout_gravity="center"
         android:scrollbarThumbVertical="@drawable/scroll_color"
-        android:layout_height="match_parent"
-        android:layout_width="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
 
         <LinearLayout
             android:orientation="vertical"
@@ -112,8 +112,56 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/clouds"
                 android:fontFamily="sans-serif-light"
-                android:textSize="25sp"
+                android:textSize="20sp"
                 android:text="@string/c5" />
+
+            <Button
+                android:id="@+id/call3Button"
+                android:layout_marginTop="@dimen/minute_margin"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/clouds"
+                android:fontFamily="sans-serif-light"
+                android:textSize="20sp"
+                android:text="@string/c6" />
+
+            <Button
+                android:id="@+id/call4Button"
+                android:layout_marginTop="@dimen/minute_margin"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/clouds"
+                android:fontFamily="sans-serif-light"
+                android:textSize="20sp"
+                android:text="@string/c7" />
+
+            <Button
+                android:id="@+id/call5Button"
+                android:layout_marginTop="@dimen/minute_margin"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/clouds"
+                android:fontFamily="sans-serif-light"
+                android:textSize="20sp"
+                android:text="@string/c8" />
+
+            <Button
+                android:id="@+id/call6Button"
+                android:layout_marginTop="@dimen/minute_margin"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/clouds"
+                android:fontFamily="sans-serif-light"
+                android:textSize="20sp"
+                android:text="@string/c9" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

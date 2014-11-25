@@ -25,6 +25,10 @@
     <string name="c3">Uttar Pradesh, PIN: 201303</string>
     <string name="c4">Phone: +91 120 450 9100</string>
     <string name="c5">Sankalp Sharma: +91 858 606 5928</string>
+    <string name="c6">Karan Gulati: +91 965 027 5934</string>
+    <string name="c7">Abhinav Kalyan: +91 956 090 0362</string>
+    <string name="c8">Himagi Ticku: +91 997 197 3101</string>
+    <string name="c9">Ms. Tajinder Khosla: +91 981 110 8010</string>
     <string name="why_you_hate_nyan_cat">WHY YOU HATE NYAN CAT?</string>
     <string-array name="drawer_items_title">
         <item>Home</item>
