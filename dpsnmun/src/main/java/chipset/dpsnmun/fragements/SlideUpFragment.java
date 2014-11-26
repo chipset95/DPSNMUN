@@ -21,8 +21,8 @@ import chipset.dpsnmun.R;
  */
 public class SlideUpFragment extends Fragment {
 
-    String wic = "<font COLOR=\"#FFFFFF\">Winter</font><font COLOR=\"#1fd571\"> is coming...</font>";
-    String wih = "<font COLOR=\"#FFFFFF\">Winter,</font><font COLOR=\"#1fd571\"> is here!</font>";
+    String cri = "<font COLOR=\"#FFFFFF\">Commitment Redefined</font><font COLOR=\"#1fd571\"> in...</font>";
+    String cr = "<font COLOR=\"#FFFFFF\">Commitment</font><font COLOR=\"#1fd571\"> Redefined</font>";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,7 +38,7 @@ public class SlideUpFragment extends Fragment {
         final TextView winTextView, winhTextView;
         winTextView = (TextView) view.findViewById(R.id.winTextView);
         winhTextView = (TextView) view.findViewById(R.id.countTextView);
-        winTextView.setText(Html.fromHtml(wic));
+        winTextView.setText(Html.fromHtml(cri));
 
         new Thread(new Runnable() {
             @Override
@@ -69,7 +69,7 @@ public class SlideUpFragment extends Fragment {
                                     winhTextView.setText(Html.fromHtml(day + hour + minute + second));
                                     winhTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 30);
                                 } else {
-                                    winTextView.setText(Html.fromHtml(wih));
+                                    winTextView.setText(Html.fromHtml(cr));
                                     String date = "<font COLOR=\"#1fd571\">2-3</font><font COLOR=\"#FFFFFF\"> December,</font><font COLOR=\"#1fd571\"> 2014</font>";
                                     winhTextView.setText(Html.fromHtml(date));
                                 }

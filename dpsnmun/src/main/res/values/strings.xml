@@ -2,8 +2,6 @@
 <resources>
 
     <string name="app_name">DPSNMUN\'14</string>
-    <string name="winter_is_coming">Winter is Coming…</string>
-    <string name="winter_is_here">Winter, Is Here!</string>
     <string name="committee_one_text">Historic General Assembly</string>
     <string name="committee_two_text">International Monetary Fund</string>
     <string name="committee_three_text">International Criminal Court</string>
