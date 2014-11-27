@@ -3,7 +3,6 @@ package chipset.dpsnmun.activities;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.res.Configuration;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -11,16 +10,12 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
@@ -49,9 +44,6 @@ public class MainActivity extends ActionBarActivity {
     String[] mDrawerTitles;
     String mTitle = "DPSNMUN\'14";
     ImageView logoImageView;
-    LinearLayout allYourNyanIsBelongToUs;
-    MediaPlayer mMediaPlayer;
-    boolean isPlaying = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +55,6 @@ public class MainActivity extends ActionBarActivity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerListView = (ListView) findViewById(R.id.drawer_list);
         logoImageView = (ImageView) findViewById(R.id.logoiv);
-        allYourNyanIsBelongToUs = (LinearLayout) findViewById(R.id.all_your_nyan_is_belong_to_us);
 
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -134,40 +125,14 @@ public class MainActivity extends ActionBarActivity {
                 Functions.funkit().browserIntent(getApplicationContext(), URL_DPSNMUN);
             }
         });
-
-        allYourNyanIsBelongToUs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (!isPlaying) {
-                    mMediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.gb);
-                    mMediaPlayer.setLooping(true);
-                    mMediaPlayer.start();
-                    isPlaying = true;
-                    invalidateOptionsMenu();
-                    mDrawerLayout.closeDrawers();
-                }
-            }
-        });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-        return isPlaying && super.onCreateOptionsMenu(menu);
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
-        }
-        if (id == R.id.stop_the_nyan) {
-            mMediaPlayer.stop();
-            isPlaying = false;
-            invalidateOptionsMenu();
-            Toast.makeText(getApplicationContext(), getResources().getString(R.string.why_you_hate_nyan_cat), Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
     }

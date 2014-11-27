@@ -26,7 +26,6 @@
         android:background="@color/dpsnmundark" />
 
     <LinearLayout
-        android:id="@+id/all_your_nyan_is_belong_to_us"
         android:layout_marginTop="@dimen/minute_margin"
         android:layout_width="match_parent"
         android:layout_height="0dp"
