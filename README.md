@@ -7,7 +7,6 @@ After a lot of dedicated work, we bring to you 4 sublime committees to provide a
 For more information, stay tuned to our official app.
 
 Regards
-
 Secretariat
 
 [![Get the app from playstore](https://developer.android.com/images/brand/en_app_rgb_wo_60.png)](https://play.google.com/store/apps/details?id=chipset.dpsnmun)
