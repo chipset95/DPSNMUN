@@ -17,10 +17,10 @@ public class Constants {
     public static String URL_TW = "https://twitter.com/dpsnmun";
     public static String URL_MAIL = "dpsnoidamun@gmail.com";
 
-    public static String PHONE_SCHOOL = "+911204509100";
-    public static String PHONE_SANKALP = "+918586065928";
-    public static String PHONE_KARAN = "+919650275934";
-    public static String PHONE_ABHINAV = "+919560900362";
-    public static String PHONE_HIMANGI = "+919971973101";
-    public static String PHONE_TAJINDER = "+919811108010";
+    public static String PHONE_SCHOOL = "PHONE_SCHOOL";
+    public static String PHONE_SANKALP = "PHONE_SANKALP";
+    public static String PHONE_KARAN = "PHONE_KARAN";
+    public static String PHONE_ABHINAV = "PHONE_ABHINAV";
+    public static String PHONE_HIMANGI = "PHONE_HIMANGI";
+    public static String PHONE_TAJINDER = "PHONE_TAJINDER";
 }
