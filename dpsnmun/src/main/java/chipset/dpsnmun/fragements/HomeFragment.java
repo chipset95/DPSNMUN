@@ -1,7 +1,7 @@
 package chipset.dpsnmun.fragements;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,7 +31,7 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         TextView homeTextView = (TextView) view.findViewById(R.id.homeTextView);
-        String actualStringToDisplay = "<font COLOR=\"#FFFFFF\">DPSN</font><font COLOR=\"#1fd571\"> MUN</font><font COLOR=\"#FFFFFF\">\'14</font>";
+        String actualStringToDisplay = "<font COLOR=\"#FFFFFF\">DPSN</font><font COLOR=\"#1fd571\">MUN</font><font COLOR=\"#FFFFFF\">\'15</font>";
         homeTextView.setText(Html.fromHtml(actualStringToDisplay));
 
     }

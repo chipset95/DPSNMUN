@@ -1,20 +1,22 @@
 package chipset.dpsnmun.activities;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.content.res.Configuration;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
@@ -25,7 +27,7 @@ import chipset.dpsnmun.fragements.DetailFragment;
 import chipset.dpsnmun.fragements.HomeFragment;
 import chipset.dpsnmun.fragements.ScheduleFragment;
 import chipset.dpsnmun.fragements.SlideUpFragment;
-import chipset.dpsnmun.resources.Functions;
+import chipset.potato.Potato;
 
 import static chipset.dpsnmun.resources.Constants.URL_DPSNMUN;
 /*
@@ -35,15 +37,19 @@ import static chipset.dpsnmun.resources.Constants.URL_DPSNMUN;
  * Date : 9/11/14
  */
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
+
     SlidingUpPanelLayout mSlidingUpPanelLayout;
     DrawerLayout mDrawerLayout;
     ActionBarDrawerToggle mDrawerToggle;
     Toolbar mToolbar;
     ListView mDrawerListView;
     String[] mDrawerTitles;
-    String mTitle = "DPSNMUN\'14";
+    String mTitle = "DPSNMUN\'15";
     ImageView logoImageView;
+    LinearLayout mDevLayout;
+    MediaPlayer mMediaPlayer;
+    boolean isPlaying = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +61,21 @@ public class MainActivity extends ActionBarActivity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerListView = (ListView) findViewById(R.id.drawer_list);
         logoImageView = (ImageView) findViewById(R.id.logoiv);
+        mDevLayout = (LinearLayout) findViewById(R.id.dev_layout);
+
+        mDevLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!isPlaying) {
+                    mMediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.mia);
+                    mMediaPlayer.setLooping(true);
+                    mMediaPlayer.start();
+                    isPlaying = true;
+                    invalidateOptionsMenu();
+                    mDrawerLayout.closeDrawers();
+                }
+            }
+        });
 
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -74,15 +95,15 @@ public class MainActivity extends ActionBarActivity {
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
 
         mDrawerTitles = getResources().getStringArray(R.array.drawer_items_title);
-        mDrawerListView.setAdapter(new ArrayAdapter<String>(MainActivity.this,
+        mDrawerListView.setAdapter(new ArrayAdapter<>(MainActivity.this,
                 R.layout.drawer_list_item, mDrawerTitles));
 
         Fragment fra = new HomeFragment();
-        FragmentManager fraManager = getFragmentManager();
+        FragmentManager fraManager = getSupportFragmentManager();
         fraManager.beginTransaction()
                 .replace(R.id.content_frame, fra).commit();
         Fragment frag = new SlideUpFragment();
-        FragmentManager fragManager = getFragmentManager();
+        FragmentManager fragManager = getSupportFragmentManager();
         fragManager.beginTransaction()
                 .replace(R.id.slide_up_frame, frag).commit();
 
@@ -109,7 +130,7 @@ public class MainActivity extends ActionBarActivity {
                         break;
                     }
                 }
-                FragmentManager fragmentManager = getFragmentManager();
+                FragmentManager fragmentManager = getSupportFragmentManager();
                 fragmentManager.beginTransaction()
                         .replace(R.id.content_frame, fragment).commit();
                 mTitle = mDrawerTitles[i];
@@ -122,17 +143,26 @@ public class MainActivity extends ActionBarActivity {
         logoImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Functions.funkit().browserIntent(getApplicationContext(), URL_DPSNMUN);
+                Potato.potate().Intents().browserIntent(getApplicationContext(), URL_DPSNMUN);
             }
         });
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return isPlaying && super.onCreateOptionsMenu(menu);
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
+        } else if (id == R.id.stop_mia) {
+            mMediaPlayer.stop();
+            isPlaying = false;
+            invalidateOptionsMenu();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -151,10 +181,11 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public void onBackPressed() {
-        if (mDrawerLayout.isDrawerOpen(Gravity.START | Gravity.LEFT)) {
+        if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
             mDrawerLayout.closeDrawers();
             return;
         }
         super.onBackPressed();
     }
+
 }

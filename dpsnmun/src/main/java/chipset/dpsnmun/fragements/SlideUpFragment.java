@@ -1,7 +1,7 @@
 package chipset.dpsnmun.fragements;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.text.Html;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -53,7 +53,7 @@ public class SlideUpFragment extends Fragment {
                             public void run() {
                                 Calendar current = Calendar.getInstance();
                                 Calendar event = Calendar.getInstance();
-                                event.set(2014, Calendar.DECEMBER, 2, 8, 0, 0);
+                                event.set(2015, Calendar.OCTOBER, 30, 7, 15, 0);
                                 if (current.before(event)) {
                                     long cur = current.getTimeInMillis();
                                     long eve = event.getTimeInMillis();
@@ -70,7 +70,7 @@ public class SlideUpFragment extends Fragment {
                                     winhTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 30);
                                 } else {
                                     winTextView.setText(Html.fromHtml(cr));
-                                    String date = "<font COLOR=\"#1fd571\">2-3</font><font COLOR=\"#FFFFFF\"> December,</font><font COLOR=\"#1fd571\"> 2014</font>";
+                                    String date = "<font COLOR=\"#1fd571\">30th - 31st</font><font COLOR=\"#FFFFFF\"> October,</font><font COLOR=\"#1fd571\"> 2015</font>";
                                     winhTextView.setText(Html.fromHtml(date));
                                 }
                             }

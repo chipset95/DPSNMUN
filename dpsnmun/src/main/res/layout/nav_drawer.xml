@@ -1,100 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@color/dpsnmundark"
     android:layout_height="match_parent"
+    android:background="@color/dpsnmundark"
     android:orientation="vertical">
 
     <ImageView
         android:id="@+id/logoiv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.35"
         android:layout_gravity="center"
-        android:src="@drawable/bg"
-        android:contentDescription="@string/app_name" />
+        android:layout_weight="0.35"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/bg" />
 
     <ListView
         android:id="@+id/drawer_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.4"
+        android:background="@color/dpsnmundark"
         android:choiceMode="singleChoice"
         android:divider="@color/dpsnmun"
         android:dividerHeight="1dp"
-        android:scrollbarThumbVertical="@drawable/scroll_color"
-        android:background="@color/dpsnmundark" />
+        android:scrollbarThumbVertical="@drawable/scroll_color" />
 
     <LinearLayout
-        android:layout_marginTop="@dimen/minute_margin"
+        android:id="@+id/dev_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="@dimen/small_margin"
         android:layout_weight="0.33">
 
         <LinearLayout
-            android:id="@+id/dev_layout"
-            android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.5">
+            android:layout_weight="0.5"
+            android:orientation="vertical">
 
             <ImageView
-                android:layout_margin="@dimen/medium_margin"
                 android:layout_width="match_parent"
-                android:layout_weight="0.4"
                 android:layout_height="0dp"
+                android:layout_margin="@dimen/small_margin"
+                android:layout_weight="0.4"
                 android:src="@drawable/kartik" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.2"
+                android:gravity="center"
                 android:text="Developed by"
-                android:textSize="15sp"
                 android:textColor="?attr/colorAccent"
-                android:gravity="center" />
+                android:textSize="15sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.2"
+                android:gravity="center"
                 android:text="Kartik Arora"
-                android:textSize="20sp"
                 android:textColor="?attr/colorAccent"
-                android:gravity="center" />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/idea_layout"
-            android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.5">
+            android:layout_weight="0.5"
+            android:orientation="vertical">
 
             <ImageView
-                android:layout_margin="@dimen/medium_margin"
                 android:layout_width="match_parent"
-                android:layout_weight="0.4"
                 android:layout_height="0dp"
+                android:layout_margin="@dimen/small_margin"
+                android:layout_weight="0.4"
                 android:src="@drawable/aryan" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.2"
-                android:text="Idea by"
-                android:textSize="15sp"
+                android:gravity="center"
+                android:text="Ideated by"
                 android:textColor="?attr/colorAccent"
-                android:gravity="center" />
+                android:textSize="15sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.2"
+                android:gravity="center"
                 android:text="Aditya Aryan"
-                android:textSize="20sp"
                 android:textColor="?attr/colorAccent"
-                android:gravity="center" />
+                android:textSize="20sp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

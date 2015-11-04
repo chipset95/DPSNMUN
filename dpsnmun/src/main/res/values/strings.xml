@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">DPSNMUN\'14</string>
+    <string name="app_name">DPSNMUN\'15</string>
     <string name="committee_one_text">Historic General Assembly</string>
     <string name="committee_two_text">International Monetary Fund</string>
     <string name="committee_three_text">International Criminal Court</string>
@@ -11,23 +11,23 @@
     <string name="title_contact">Contact Us</string>
     <string name="title_schedule">Schedule</string>
     <string name="commit">Commitment Redefined</string>
-    <string name="date">2–3 December, 2014</string>
+    <string name="date">30th –31st October, 2015</string>
     <string name="collab">In collaboration with the United Nations Information Centre for India and Bhutan</string>
-    <string name="hga_data">Drafting a comprehensive framework to combat terrorist financing through conflict diamonds</string>
-    <string name="imf_data">Economic reforms and structural adjustments in India</string>
-    <string name="icc_data">The incorporation of a definition and the conditions for the exercise of the jurisdiction of the ICC in the Crime of aggression</string>
-    <string name="whsr_data">We are not gonna make this too easy for you</string>
+    <string name="ga_data">Devising a framework for the protection of civilians against the use of incendiary weapons, laser weapons and \'Lethal Autonomous Weapon Systems\'</string>
+    <string name="gs_data">Subprime Mortgage Crisis</string>
+    <string name="npt_data">Improving the verification of compliance towards disarmament agreements under the NPT regime</string>
+    <string name="whsr_data">CLASSIFIED</string>
+    <string name="hrc_data">Ethics and legality of euthanasia with special emphasis on right to life</string>
     <string name="md">BACKGROUND GUIDE</string>
     <string name="c1">Delhi Public School Noida</string>
     <string name="c2">Sector 30, Noida</string>
     <string name="c3">Uttar Pradesh, PIN: 201303</string>
     <string name="c4">Phone: +91 120 450 9100</string>
-    <string name="c5">Sankalp Sharma: +91 858 606 5928</string>
-    <string name="c6">Karan Gulati: +91 965 027 5934</string>
-    <string name="c7">Abhinav Kalyan: +91 956 090 0362</string>
-    <string name="c8">Himangi Ticku: +91 997 197 3101</string>
-    <string name="c9">Ms. Tejinder Khosla: +91 981 110 8010</string>
-    <string name="why_you_hate_nyan_cat">WHY YOU HATE NYAN CAT?</string>
+    <string name="ma">Millind Agarwal - Deputy Secretary General</string>
+    <string name="sa">Sahil Arora - Director General</string>
+    <string name="ak">Abhinav Kalyan - Secretary General</string>
+    <string name="tj">Ms. Tejinder Khosla - Chef de Cabinet</string>
+    <string name="just_some_random_text">MIA KHALIFA!!!</string>
     <string-array name="drawer_items_title">
         <item>Home</item>
         <item>Details</item>

@@ -1,80 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@color/dpsnmundark"
     android:layout_height="match_parent"
+    android:background="@color/dpsnmundark"
     android:orientation="vertical">
 
     <TextView
-        android:layout_marginTop="@dimen/big_margin"
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_margin"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
         android:text="@string/title_details"
         android:textColor="?attr/colorAccent"
-        android:fontFamily="sans-serif-thin"
         android:textSize="50sp" />
 
     <ScrollView
-        android:layout_marginTop="@dimen/big_margin"
-
-        android:scrollbarThumbVertical="@drawable/scroll_color"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/big_margin"
+        android:scrollbarThumbVertical="@drawable/scroll_color">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="@dimen/medium_margin">
 
             <ImageView
+                android:id="@+id/ga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:id="@+id/coiv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/rsz_hga"
-                android:contentDescription="@string/committee_one_text"
-                android:layout_marginBottom="@dimen/minute_margin" />
+                android:layout_marginBottom="@dimen/small_margin"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ga" />
 
             <ImageView
-                android:layout_below="@id/coiv"
-                android:id="@+id/ctwiv"
+                android:id="@+id/whsr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/ga"
                 android:layout_gravity="center"
-                android:src="@drawable/rsz_imf"
-                android:contentDescription="@string/committee_one_text"
-                android:layout_marginBottom="@dimen/minute_margin" />
+                android:layout_marginBottom="@dimen/small_margin"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/whsr" />
 
             <ImageView
-                android:layout_below="@id/ctwiv"
-                android:id="@+id/cthiv"
+                android:id="@+id/gs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/whsr"
                 android:layout_gravity="center"
-                android:src="@drawable/rsz_icc"
+                android:layout_marginBottom="@dimen/small_margin"
                 android:contentDescription="@string/committee_one_text"
-                android:layout_marginBottom="@dimen/minute_margin" />
+                android:src="@drawable/gs" />
 
             <ImageView
-                android:layout_below="@id/cthiv"
-                android:id="@+id/cfiv"
+                android:id="@+id/npt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/gs"
                 android:layout_gravity="center"
-                android:src="@drawable/rsz_whsr"
+                android:layout_marginBottom="@dimen/small_margin"
                 android:contentDescription="@string/committee_one_text"
-                android:layout_marginBottom="@dimen/minute_margin" />
+                android:src="@drawable/npt" />
 
             <ImageView
-                android:layout_below="@id/cfiv"
-                android:id="@+id/riv"
+                android:id="@+id/hrc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/npt"
                 android:layout_gravity="center"
-                android:src="@drawable/rsz_reg"
+                android:layout_marginBottom="@dimen/small_margin"
                 android:contentDescription="@string/committee_one_text"
-                android:layout_marginBottom="@dimen/minute_margin" />
+                android:src="@drawable/hrc" />
         </RelativeLayout>
     </ScrollView>
 </LinearLayout>
